@@ -71,8 +71,8 @@ function StepCard({ num, icon, title, desc }) {
       <span className="mb-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-500/20 text-xs font-bold text-brand-400">
         {num}
       </span>
-      <h4 className="mb-1 text-base font-bold text-white">{title}</h4>
-      <p className="text-sm text-brand-300/80 max-w-xs">{desc}</p>
+      <h4 className="mb-1 text-base font-bold text-white light:text-gray-900">{title}</h4>
+      <p className="text-sm text-brand-300/80 light:text-gray-500 max-w-xs">{desc}</p>
     </div>
   );
 }
@@ -80,8 +80,8 @@ function StepCard({ num, icon, title, desc }) {
 function StatItem({ value, label }) {
   return (
     <div className="text-center">
-      <p className="text-3xl font-extrabold text-white">{value}</p>
-      <p className="mt-1 text-sm text-brand-300/80">{label}</p>
+      <p className="text-3xl font-extrabold text-white light:text-gray-900">{value}</p>
+      <p className="mt-1 text-sm text-brand-300/80 light:text-gray-500">{label}</p>
     </div>
   );
 }

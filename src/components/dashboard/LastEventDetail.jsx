@@ -27,8 +27,8 @@ export default function LastEventDetail({ event, basalHr }) {
               </svg>
             </div>
             <div>
-              <h2 className="text-base font-bold text-white">Crisis Tónico-Clónica</h2>
-              <p className="text-sm text-brand-300/70">
+              <h2 className="text-base font-bold text-white light:text-gray-900">Crisis Tónico-Clónica</h2>
+              <p className="text-sm text-brand-300/70 light:text-gray-500">
                 Duración: <strong>{formatDuration(event.duration_seconds)}</strong>
               </p>
             </div>
@@ -36,7 +36,7 @@ export default function LastEventDetail({ event, basalHr }) {
         </div>
         <div className="flex items-center gap-2">
           <Badge className={`${sev.bg} ${sev.text} ${sev.ring}`}>{sev.label}</Badge>
-          <span className="text-xs font-medium text-brand-300 bg-brand-500/15 rounded-full px-2.5 py-1">
+          <span className="text-xs font-medium text-brand-300 light:text-brand-700 bg-brand-500/15 light:bg-brand-100 rounded-full px-2.5 py-1">
             {timeAgo(event.timestamp || event.start_timestamp)}
           </span>
         </div>
@@ -51,10 +51,10 @@ export default function LastEventDetail({ event, basalHr }) {
             </svg>
             <p className="text-xs font-bold text-danger uppercase tracking-wider">Frecuencia Cardíaca</p>
           </div>
-          <p className="mt-2 text-3xl font-bold text-white tabular-nums">
-            {Math.round(phys.hr_peak_bpm || 0)} <span className="text-sm font-medium text-brand-300/70">bpm</span>
+          <p className="mt-2 text-3xl font-bold text-white light:text-gray-900 tabular-nums">
+            {Math.round(phys.hr_peak_bpm || 0)} <span className="text-sm font-medium text-brand-300/70 light:text-gray-500">bpm</span>
           </p>
-          <p className="mt-1 text-xs text-brand-300/70">
+          <p className="mt-1 text-xs text-brand-300/70 light:text-gray-500">
             Pico (Basal: {basalHr || 72} bpm)
           </p>
         </div>
@@ -66,10 +66,10 @@ export default function LastEventDetail({ event, basalHr }) {
             </svg>
             <p className="text-xs font-bold text-brand-400 uppercase tracking-wider">Saturación O₂</p>
           </div>
-          <p className="mt-2 text-3xl font-bold text-white tabular-nums">
-            {Math.round(phys.spo2_min || 0)}<span className="text-sm font-medium text-brand-300/70">%</span>
+          <p className="mt-2 text-3xl font-bold text-white light:text-gray-900 tabular-nums">
+            {Math.round(phys.spo2_min || 0)}<span className="text-sm font-medium text-brand-300/70 light:text-gray-500">%</span>
           </p>
-          <p className="mt-1 text-xs text-brand-300/70">Mínima durante evento</p>
+          <p className="mt-1 text-xs text-brand-300/70 light:text-gray-500">Mínima durante evento</p>
         </div>
 
         <div className="rounded-xl bg-warning/10 border border-warning/20 p-4">
@@ -79,10 +79,10 @@ export default function LastEventDetail({ event, basalHr }) {
             </svg>
             <p className="text-xs font-bold text-warning uppercase tracking-wider">Actividad Motora</p>
           </div>
-          <p className="mt-2 text-3xl font-bold text-white tabular-nums">
-            {(motor.acc_mag_max || 0).toFixed(1)} <span className="text-sm font-medium text-brand-300/70">g RMS</span>
+          <p className="mt-2 text-3xl font-bold text-white light:text-gray-900 tabular-nums">
+            {(motor.acc_mag_max || 0).toFixed(1)} <span className="text-sm font-medium text-brand-300/70 light:text-gray-500">g RMS</span>
           </p>
-          <p className="mt-1 text-xs text-brand-300/70">
+          <p className="mt-1 text-xs text-brand-300/70 light:text-gray-500">
             Motor elevado: {motor.pct_elevated || 0}%
           </p>
         </div>
