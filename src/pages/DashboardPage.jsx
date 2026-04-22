@@ -53,6 +53,29 @@ export default function DashboardPage() {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto space-y-6 px-4 py-6 sm:px-6 lg:px-8">
+        {/* Banner: abrir app móvil en Chrome */}
+        <div className="flex items-center justify-between gap-4 rounded-2xl border border-brand-500/20 bg-brand-900/40 light:bg-brand-50 light:border-brand-200 px-5 py-3 backdrop-blur">
+          <div className="flex items-center gap-3">
+            <svg className="h-5 w-5 shrink-0 text-brand-400 light:text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 8.25h3m-3 3.75h3m-3 3.75h3" />
+            </svg>
+            <span className="text-sm text-brand-200 light:text-brand-800">
+              También puedes monitorear desde la <span className="font-semibold">app móvil</span> directamente en el navegador
+            </span>
+          </div>
+          <a
+            href="https://neuroguard-b6b84.web.app"
+            target="_blank"
+            rel="noreferrer"
+            className="shrink-0 inline-flex items-center gap-2 rounded-xl bg-brand-600 hover:bg-brand-500 active:bg-brand-700 px-4 py-2 text-sm font-semibold text-white transition-colors"
+          >
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+            Abrir App Móvil
+          </a>
+        </div>
+
         {/* Encabezado paciente */}
         <PatientHeader profile={profile} device={device} />
 
